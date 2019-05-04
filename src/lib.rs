@@ -1,3 +1,8 @@
+pub struct KeypointDescriptor<K, D> {
+    pub keypoints: K,
+    pub descriptors: D,
+}
+
 trait FeatureExtractor<'a, Source> {
     type Features: 'a;
 
