@@ -1,7 +1,9 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
-    }
+use image::GrayImage;
+
+trait FeatureSource<'a> {
+    type Out;
+    fn extract_features<E>(&'a self, extractor: E) -> Self::Out where E: FeatureExtractor;
+}
+
+trait FeatureExtractor {
 }
