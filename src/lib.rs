@@ -3,19 +3,19 @@ pub struct KeypointDescriptor<K, D> {
     pub descriptors: D,
 }
 
-trait FeatureExtractor<'a, Source> {
+pub trait FeatureExtractor<'a, Source> {
     type Features: 'a;
 
     fn extract(&self, source: &'a Source) -> Self::Features;
 }
 
-trait KeypointExtractor<'a, Source> {
+pub trait KeypointExtractor<'a, Source> {
     type Keypoints: 'a;
 
     fn extract_keypoints(&self, source: &'a Source) -> Self::Keypoints;
 }
 
-trait DescriptorExtractor<'a, Source, Keypoints> {
+pub trait DescriptorExtractor<'a, Source, Keypoints> {
     type Features: 'a;
 
     fn extract_descriptors(&self, source: &'a Source, keypoints: Keypoints) -> Self::Features;
