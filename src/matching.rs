@@ -1,5 +1,5 @@
-pub trait FeatureMatcher<Keypoints> {
+pub trait FeatureMatcher<Features> {
     type Matches;
 
-    fn matching(&self, keypoints: (Keypoints, Keypoints)) -> Self::Matches;
+    fn matching(&self, features: (Features, Features)) -> Self::Matches;
 }
