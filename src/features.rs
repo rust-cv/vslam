@@ -1,3 +1,4 @@
+#[derive(Copy, Clone, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct KeypointDescriptor<K, D> {
     pub keypoints: K,
     pub descriptors: D,
