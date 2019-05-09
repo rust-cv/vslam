@@ -6,3 +6,4 @@ edition = "2018"
 
 [dependencies]
 image = { version = "0.21.1", default-features = false }
+serde = { version = "1.0.91", features = ["derive"] }
